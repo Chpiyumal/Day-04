@@ -22,3 +22,8 @@ except FileExistsError:
     print(f"File '{file_to_move}' Already exists in '{target_dir} Directory")
 except Exception as e:
     print(f"An Error Occured: '{e}")
+
+#--Cleanup
+if os.path.exists(target_dir):
+    shutil.rmtree(target_dir) #Use Rmtree as target_dir now contain
+print("Cleanup dummy directory")
