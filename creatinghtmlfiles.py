@@ -32,4 +32,10 @@ except FileExistsError:
     print(f"Error: Destination directory '{destination_dir}' already exists")
 except Exception as e:
     print(f"Error Occured: '{e}'")
-     
+
+#--------Clean
+if os.path.exists(source_dir):
+    shutil.rmtree(source_dir)
+if os.path.exists(destination_dir):
+    shutil.rmtree(destination_dir)
+print("Cleaned up dummy directory")
