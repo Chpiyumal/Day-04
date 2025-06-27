@@ -39,4 +39,6 @@ def main():
     elif result:
         print(f"Command failed with exit code: {result.returncode}")
         print(f"Stderr: {result.stderr}")
-        
+
+if __name__ == "__main__":
+    main()
